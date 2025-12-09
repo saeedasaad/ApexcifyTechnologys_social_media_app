@@ -1,0 +1,438 @@
+/* ----- ROOT VARIABLES – COLORS, FONTS & GLOBAL GRADIENTS ----- */
+:root {
+    /* Font */
+    --font-primary: "Inter", sans-serif;
+
+    /* Brand Colors */
+    --color-purple: #7c24cf;
+    --color-blue: #3990fc;
+    --color-light-blue: #6B7CFF;
+
+    /* Grays */
+    --color-light-gray: #f9f9f9;
+    --color-gray: #ddd;
+    --color-dark-gray: #1e1f23;
+    --color-darker-gray: #17181c;
+    --color-deep-gray: #1e2435;
+
+
+    --color-light-gray: #f9f9f9;
+    --color-white: #ffffff;
+    --color-dark-gray: #1e1f23;
+    --color-darker-gray: #17181c;
+    --color-deep-gray: #1e2435;
+
+    /* Inputs */
+    --input-border: #363636;
+
+    /* Backgrounds */
+    --dark-bg: #0e0e10;
+
+    /* Gradients */
+    --gradient-purple-blue: linear-gradient(90deg, #7c24cf 0%, #3990fc 100%);
+    --gradient-purple-lightblue: linear-gradient(90deg, #8c52ff, #5c6cff);
+}
+
+/* FEED MAIN WRAPPER */
+.feed-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 40px 50px;
+}
+
+/* LEFT FEED COLUMN */
+.feed-left {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* RIGHT FEED COLUMN */
+.feed-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* FEED CARD BOX */
+/* FEED CARD BOX */
+.feed-card {
+    background: #0a0c12;
+    border: 2px solid var(--color-deep-gray);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+
+/* HEADER */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.user-info {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.user-img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+.header-icons i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.card-text {
+    color: var(--color-gray);
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* IMAGE */
+.card-image img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* FOOTER ICONS */
+.card-footer {
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+    color: #aaa;
+}
+
+
+
+/* ---------------------------
+   TOP INPUT SECTION
+--------------------------- */
+.feed-input-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feed-user-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.feed-input {
+    flex: 1;
+    padding: 10px 15px;
+    /* border-radius: 30px; */
+    background: transparent;
+    border: 1px solid var(--color-deep-gray);
+    color: var(--color-gray);
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.feed-input:focus {
+    border-color: var(--color-blue);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.create-post-card {
+    transition: all 0.3s ease;
+}
+
+
+/* ---------------------------
+   BOTTOM ACTIONS
+--------------------------- */
+.feed-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* LEFT ICONS */
+.feed-action-icons i {
+    font-size: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+.feed-action-icons i:hover {
+    color: var(--color-blue);
+    transform: scale(1.1);
+}
+
+/* RIGHT SIDE */
+.feed-action-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.feed-draft {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.feed-draft i {
+    margin-right: 5px;
+}
+
+/* POST BUTTON */
+.feed-post-btn {
+    padding: 8px 30px;
+    background-color: transparent;
+    border: 1px solid var(--color-deep-gray);
+    border-radius: 8px;
+    color: var(--color-blue);
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.feed-post-btn:hover {
+    background: var(--gradient-purple-blue);
+    color: var(--color-white);
+    border: 1px solid transparent;
+
+}
+
+.more-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.more-dropdown .dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    background: var(--color-white);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    padding: 6px;
+    z-index: 50;
+}
+
+.more-dropdown .dropdown-menu.hidden {
+    display: none;
+}
+
+.more-dropdown .dropdown-menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 8px 10px;
+    cursor: pointer;
+}
+
+
+/* Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    border-radius: 6px;
+    width: 200px;
+    background: #0a0c12;
+    border: 2px solid var(--color-deep-gray);
+    border-radius: 10px;
+    padding: 12px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+    list-style: none;
+    margin-top: 10px;
+
+}
+
+
+.dropdown-item {
+    padding: 8px 0;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.dropdown-item:hover {
+    background: var(--color-deep-gray);
+    color: var(--color-blue);
+}
+
+.dropdown-item:hover i {
+    color: var(--color-blue);
+    /* icon turns blue */
+}
+
+.dropdown-item i {
+    font-size: 16px !important;
+}
+
+
+.dropdown-menu.show {
+    display: block;
+}
+
+
+.dropdown-panel {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 250px;
+    background: var(--color-white);
+    border: 1px solid var(--color-gray);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.dropdown-panel h4 {
+    margin: 0;
+    padding: 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-panel ul li {
+    padding: 8px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 13px;
+}
+
+.dropdown-panel ul li:last-child {
+    border-bottom: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.comment-composer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+
+.comment-input {
+    flex: 1;
+    width: 100%;
+    resize: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: transparent;
+    border: 1px solid var(--color-deep-gray);
+    color: var(--color-gray);
+    outline: none;
+    font-size: 15px;
+
+}
+
+.comment-btn {
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 30px;
+    padding: 8px 0;
+    font-size: 12px;
+    align-self: flex-end;
+    cursor: pointer;
+    display: none;
+    margin-bottom: 30px;
+
+}
+
+/* COMMENT LIST */
+.comment-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.comment-item {
+  margin-bottom: 10px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.comment-avatar {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #eee;
+}
+
+.comment-text {
+  margin-left: 36px;
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+/* COMMENT ACTIONS */
+.comment-actions {
+  margin-left: 36px;
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+}
+.comment-actions i {
+  margin-right: 4px;
+}

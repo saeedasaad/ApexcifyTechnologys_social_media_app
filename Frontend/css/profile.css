@@ -1,0 +1,177 @@
+    /* Container */
+    .profile-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 30px 10px;
+        width: 70%;
+        margin: auto;
+    }
+
+    .profile-card{
+              padding:30px;  
+    }
+
+
+    /* Header */
+    .profile-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .profile-card-header h3 {
+        margin: 0;
+        font-size: 1.5rem;
+    }
+
+    .close-profile {
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: #888;
+    }
+
+    .profile-subtitle {
+        margin: 8px 0 15px;
+        color: #666;
+        font-size: 0.95rem;
+    }
+
+
+
+    /* Avatar */
+    .profile-avatar p {
+        font-weight: 500;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
+
+    .avatar-preview {
+        /* position: relative; */
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 5px;
+    }
+
+    .avatar-preview img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+        border: 2px solid #ddd;
+    }
+
+    .avatar-preview small {
+        font-size: 12px;
+    }
+
+    /* Inputs */
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .profile-inputs {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    .input-group {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .input-group label {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .input-group input {
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        background: transparent;
+        color: #fff;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+
+    /* Bio */
+    .profile-bio {
+        width: 100%;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-bio label {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .profile-bio textarea {
+        width: 100%;
+        padding: 8px;
+        border-radius: 6px;
+        background: transparent;
+        color: #fff;
+        border: 1px solid #ccc;
+        resize: vertical;
+        min-height: 60px;
+        font-size: 0.95rem;
+    }
+
+    .profile-bio small {
+        margin-top: 4px;
+        color: #999;
+        align-self: flex-end;
+    }
+
+    .profile-privacy {
+        width: 100%;
+    }
+
+    /* Privacy */
+    .profile-privacy h5 {
+        margin-bottom: 8px;
+    }
+
+    .privacy-option {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+    }
+
+    .privacy-option span small {
+        display: block;
+        font-size: 0.75rem;
+        color: #999;
+    }
+
+    /* Save Button */
+    .profile-save-btn {
+        width: 100%;
+        padding: 10px;
+        background: #6B7CFF;
+        color: #fff;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 30px;
+    }
+
+
+    .profile-save-btn:hover {
+        background: #5562d8;
+    }

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href="./assets/icons/favicon.png" type="image/png" />
+    <title>My Posts • SocialHub</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/feed.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+    <div class="background"></div>
+    <div class="overlay"></div>
+
+    <aside class="sidebar">
+        <div class="logo-wrapper">
+            <a href="index.html"><img src="./assets/images/logo.png" alt="Logo"></a>
+        </div>
+
+        <div class="profile">
+            <div class="sidebar-profile-info">
+                <img id="userImage" src="http://localhost:5000/uploads/profiles/default.png" class="nav-profile-img"
+                    alt="Profile" />
+                <div>
+                    <h4 id="userName">Loading...</h4>
+                    <p id="nav-bio">Loading...</p>
+                </div>
+            </div>
+            <div class="profile-stats">
+                <span class="stat-item"><strong>10</strong><small>Post</small></span>
+                <span class="stat-item"><strong>30</strong><small>Follow</small></span>
+                <span class="stat-item"><strong>300</strong><small>Following</small></span>
+            </div>
+        </div>
+
+        <hr />
+
+        <ul class="sidebar-menu">
+            <li class="menu-item"><a href="feed.html"><i class="ri-home-4-line"></i> Home</a></li>
+            <li class="menu-item"><i class="ri-group-line"></i> Community</li>
+            <li class="menu-item"><i class="ri-calendar-event-line"></i><span>Events</span></li>
+            <li id="open-create-post" class="menu-item"><i class="ri-add-line"></i> Create Post</li>
+            <li class="menu-item"><a href="mypost.html"><i class="ri-image-2-line"></i> My Posts</a></li>
+        </ul>
+
+        <hr />
+
+        <div class="community-section">
+            <div class="community-header">
+                <h5>My Community</h5>
+                <i class="ri-group-line"></i>
+            </div>
+            <div class="community-list">
+                <div class="community-card">
+                    <img src="./assets/images/user3.png" alt="User" />
+                    <div class="community-info">
+                        <p>UI/UX Designer</p>
+                        <small>250 members</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-container">
+        <nav class="top-nav">
+            <div class="nav-left">
+                <div class="brand-name"><i class="ri-supabase-fill"></i>My Posts</div>
+            </div>
+        </nav>
+
+        <section class="feed-section">
+            <div class="feed-left">
+                <!-- Feed holder (dynamic posts will be injected here) -->
+                <div id="feed"></div>
+            </div>
+
+            <!-- RIGHT SIDEBAR -->
+            <div class="feed-right">
+                <div class="feed-card">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="user-info">
+                                <img src="./assets/images/user3.png" alt="" class="user-img" />
+                                <div>
+                                    <h3>Community Member</h3>
+                                    <p class="time"><i class="ri-time-line"></i> Active now</p>
+                                </div>
+                            </div>
+                            <div class="header-icons"><i class="ri-more-2-fill"></i></div>
+                        </div>
+                        <p class="card-text">Welcome to the creator community! Stay active and connect with others.</p>
+                    </div>
+                </div>
+
+                <div class="community-section">
+                    <div class="community-header">
+                        <h3>Top Communities</h3>
+                        <i class="ri-arrow-down-s-line"></i>
+                    </div>
+                    <div class="community-list">
+                        <div class="community-card">
+                            <img src="./assets/images/user1.png" />
+                            <div class="community-info">
+                                <p>3D Artists</p>
+                                <small>120K Members</small>
+                            </div>
+                        </div>
+                        <div class="community-card">
+                            <img src="./assets/images/user2.png" />
+                            <div class="community-info">
+                                <p>Web Developers</p>
+                                <small>98K Members</small>
+                            </div>
+                        </div>
+                        <div class="community-card">
+                            <img src="./assets/images/user3.png" />
+                            <div class="community-info">
+                                <p>UI/UX Designers</p>
+                                <small>89K Members</small>
+                            </div>
+                        </div>
+                        <div class="community-card">
+                            <img src="./assets/images/user4.png" />
+                            <div class="community-info">
+                                <p>Graphic Designers</p>
+                                <small>57K Members</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        const BASE_URL = "http://localhost:5000";
+        const API_URL = `${BASE_URL}/api`;
+        const token = localStorage.getItem("token");
+    </script>
+    <script src="./js/mypost.js"></script>
+    <script src="./js/socket.js"></script>
+    <script src="./js/script.js" defer></script>
+</body>
+
+</html>

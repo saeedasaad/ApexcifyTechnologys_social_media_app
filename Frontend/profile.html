@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="./assets/icons/favicon.png" type="image/png" />
+  <title>Profile • SocialHub</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/feed.css" />
+  <link rel="stylesheet" href="./css/profile.css" />
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo-wrapper">
+      <a href="index.html"><img src="./assets/images/logo.png" alt="Logo"></a>
+    </div>
+
+    <div class="profile">
+      <div class="sidebar-profile-info">
+        <!--  Correct default avatar path -->
+        <img id="sidebar-profile-img" class="nav-profile-img" src="http://localhost:5000/uploads/profiles/default.png"
+          alt="Profile" />
+        <div>
+          <h4 id="nav-username">Loading...</h4>
+          <p id="nav-bio">Loading...</p>
+        </div>
+      </div>
+      <div class="profile-stats">
+        <span class="stat-item"><strong>0</strong><small>Posts</small></span>
+        <span class="stat-item"><strong>0</strong><small>Followers</small></span>
+        <span class="stat-item"><strong>0</strong><small>Following</small></span>
+      </div>
+    </div>
+
+    <hr />
+    <ul class="sidebar-menu">
+      <li class="menu-item"><a href="feed.html"><i class="ri-home-4-line"></i><span>Home</span></a></li>
+      <li class="menu-item"><a href="community.html"><i class="ri-group-line"></i><span>Community</span></a></li>
+      <li class="menu-item"><a href="events.html"><i class="ri-calendar-event-line"></i><span>Events</span></a></li>
+      <li id="open-create-post" class="menu-item"><i class="ri-add-line"></i><span>Create Post</span></li>
+      <li class="menu-item"><a href="mypost.html"><i class="ri-image-line"></i><span>My Posts</span></a></li>
+      <li class="menu-item"><a href="profile.html"><i class="ri-user-line"></i><span>Profile</span></a></li>
+    </ul>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-container">
+    <nav class="top-nav">
+      <div class="nav-left">
+        <div class="brand-name"><i class="ri-user-line"></i> Profile</div>
+      </div>
+      <div class="nav-right">
+        <i class="ri-message-3-line nav-icon"></i>
+        <i class="ri-notification-line nav-icon"></i>
+
+        <div class="profile-dropdown-wrapper">
+          <!--  Correct default avatar path -->
+          <img id="top-nav-profile-img" class="nav-profile-img" src="http://localhost:5000/uploads/profiles/default.png"
+            alt="Profile" />
+          <div class="profile-dropdown">
+            <div class="profile-info">
+              <div>
+                <h4 id="sidebar-name">Loading...</h4>
+                <p id="sidebar-email">Loading...</p>
+              </div>
+            </div>
+            <ul>
+              <li id="go-profile"><i class="ri-user-line"></i> Profile</li>
+              <li><i class="ri-settings-3-line"></i> Settings</li>
+              <li><i class="ri-question-line"></i> Help</li>
+              <li class="logout" id="logout-btn"><i class="ri-logout-circle-line"></i> Logout</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="feed-section">
+      <div class="feed-left">
+        <!-- PROFILE CARD -->
+        <div class="feed-card profile-card">
+          <div class="profile-card-header">
+            <h3>Edit Profile</h3>
+            <i class="ri-close-line close-profile" title="Close"></i>
+          </div>
+          <p class="profile-subtitle">Update your profile information</p>
+          <hr />
+
+          <!-- Avatar Upload -->
+          <div class="profile-avatar">
+            <label for="avatar-input" class="avatar-label">
+              <p>Profile Picture</p>
+              <div class="avatar-preview clickable">
+                <!--  Correct default avatar path -->
+                <img id="profile-img" class="nav-profile-img" src="http://localhost:5000/uploads/default.png"
+                  alt="Profile" />
+                <small>Click to upload (JPG, PNG, GIF). Max 5MB.</small>
+              </div>
+            </label>
+            <input type="file" id="avatar-input" accept="image/*" style="display:none" />
+          </div>
+
+          <!-- Profile fields -->
+          <div class="profile-info">
+            <div class="profile-inputs">
+              <div class="input-group">
+                <label for="edit-name">User Name</label>
+                <input type="text" id="edit-name" placeholder="Edit name" />
+              </div>
+              <div class="input-group">
+                <label for="edit-email">Email</label>
+                <input type="email" id="edit-email" placeholder="Edit email" />
+              </div>
+            </div>
+
+            <div class="profile-bio">
+              <label for="edit-bio">Bio</label>
+              <textarea id="edit-bio" placeholder="Write a short bio" maxlength="160"></textarea>
+              <small id="bio-count">0/160</small>
+            </div>
+          </div>
+
+          <div class="actions-row">
+            <button id="save-profile-btn" class="profile-save-btn">Save Changes</button>
+            <div id="success-message" class="success-box" style="display:none;"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script src="./js/script.js" defer></script>
+  <script src="./js/profile.js" defer></script>
+</body>
+
+</html>
