@@ -66,40 +66,40 @@ social_media-app/
 
 ---
 
-## 🚀 Features
+##  Features
 
-### 🔐 Authentication
+###  Authentication
 - Register & login  
 - JWT-based authentication  
 - Password hashing using **bcrypt**
 
-### 👤 User Profiles
+###  User Profiles
 - Upload avatar  
 - Bio, followers & following  
 - Sidebar profile stats  
 
-### 📝 Posts
+###  Posts
 - Create posts (text + image/file upload)  
 - Edit & delete posts  
 - Personal feed: `/api/posts/mine`
 
-### ❤️ Likes
+###  Likes
 - Like/unlike toggle  
 - Real-time like counts  
 
-### 💬 Comments
+###  Comments
 - Add, view & delete comments  
 - Dynamic comment counter  
 
-### 🔔 Real-Time Notifications
+###  Real-Time Notifications
 - Powered by **Socket.io**  
 - Users join rooms based on their User ID  
 - Instant notifications for likes/comments  
 
-### 📡 REST API
+###  REST API
 - Modular routes: auth, users, posts, comments, notifications  
 
-### 🌐 Frontend
+###  Frontend
 - Responsive HTML, CSS, JavaScript  
 - Sidebar navigation (Home, Community, Events, Create Post, My Posts, Profile)  
 - Create Post card with image/file preview  
@@ -107,13 +107,13 @@ social_media-app/
 
 ---
 
-## 🛠️ Installation & Setup
+##  Installation & Setup
 
-### 1️⃣ Install Dependencies
+### 1. Install Dependencies
 ```
 npm install
 ````
-### 2️⃣ Configure Environment Variables
+### 2. Configure Environment Variables
 
 Create a .env file:
 ```
@@ -121,18 +121,18 @@ MONGO_URI=your_mongodb_connection
 JWT_SECRET=your_secret_key
 PORT=5000
 ````
-### 3️⃣ Start the Server
+### 3. Start the Server
 ````
 npm start
 ````
 
-### 4️⃣ Open the Frontend
+### 4. Open the Frontend
 
 Open this file in your browser:
 ```
 frontend/index.html
 ````
-## 🔗 API Endpoints
+##  API Endpoints
 
 ### **Auth**
 - **POST** `/api/auth/register` – Register new user  
@@ -172,7 +172,7 @@ frontend/index.html
 ---
 
 
-## 🤝 Contributing
+##  Contributing
 Pull requests are welcome.  
 For major changes, please open an issue to discuss improvements first.
 
